@@ -5,49 +5,79 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
       </head>
       <script>
-        $(document).scroll(function(){
-            if($(this).scrollTop() >0){
-                $('.blur').css({'webkit-filter':'blur(5px)', 'filter':'blur(5px)'});
-            }else{
-                $('.blur').css({'webkit-filter':'', 'filter':''});
-            }
-        });
+        // Set the date we're counting down to
+        var countDownDate = new Date("Sept 23, 2023 16:00:00").getTime();
         
-      </script>
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+          // Get today's date and time
+          var now = new Date().getTime();
+            
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+            
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+          // Output the result in an element with id="demo"
+          document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+            
+          // If the count down is over, write some text 
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "C'est aujourd'hui!";
+          }
+        }, 1000);
+        </script>
 
 <body>
 
-<img src="pic1.jpg" width="100%" class="blur" style="left: 0em; top: 0em; position: fixed;z-index: -1;"></img>
+<!-- <img src="pic1.jpg" width="100%" class="blur" style="left: 0em; top: 0em; position: fixed;z-index: -1;"></img> -->
 
-<div style="height: 30em;"></div>
+<!-- <div style="height: 30em;"></div> -->
 
-<div style="background-color:transparent;" class="main-content">
-<br><br><br>
-<h1 class="color1" style="text-align:center; font-size: 3em;  color: white; text-shadow: 0 0 2px black, 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;">Mariage Jules & Mariana</h1>
-<h1 class="color1" style="text-align:center; font-size: 3em;  color: white; text-shadow: 0 0 2px black, 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;">Весілля Жуля та Мар’яни</h1>
 
-<br><br><br><br><br><br><br><br><br>
-<div class="box" style="margin-left: 25%;margin-right: 25%;">
-<p><a href="#section1" style="text-decoration: none;">Les mariés / Наречені</a></p>
-<p><a href="#section5" style="text-decoration: none">Les témoins / Свідки</a></p>
-<p><a href="#section2" style="text-decoration: none">Quand? / Коли?</a></p>
-<p><a href="#section3" style="text-decoration: none">Où? / Де?</a></p>
-<p><a href="#section4" style="text-decoration: none">Détails pratiques / Практичні деталі</a></p>
+<div class="main-content">
+
+<div class="box">
+<img src="pic1.jpg" width="100%" class="main_image"></img>
 </div>
-<br><br><br>
+
+<br><br>
+<h1 class="color1" style="text-align:center; font-size: 3em;  color: #FFE5F2; text-shadow: 0 0 2px black, 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;">Mariage Jules & Mariana</h1>
+<h1 class="color1" style="text-align:center; font-size: 3em;  color: #FFE5F2; text-shadow: 0 0 2px black, 0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black,0 0 2px black;">Весілля Жуля та Мар’яни</h1>
+<div class="box">
+<h1 id="demo"></h1>
+</div>
+
+<div class="menu" style="margin-left: 30%;margin-right: 30%;">
+<p><a href="#section1" style="text-decoration: none;"><b>Les mariés / Наречені</b></a></p>
+<p><a href="#section6" style="text-decoration: none;"><b>Les parents / батьки</b></a></p>
+<p><a href="#section5" style="text-decoration: none"><b>Les témoins / Свідки</b></a></p>
+<p><a href="#section2" style="text-decoration: none"><b>Quand? / Коли?</b></a></p>
+<p><a href="#section3" style="text-decoration: none"><b>Où? / Де?</b></a></p>
+<p><a href="#section4" style="text-decoration: none"><b>Détails pratiques / Практичні деталі</b></a></p>
+</div>
+<br><br>
 <div id="section1" class="box">
     <table>
         <tbody>
             <tr>
                 <td>
-                    <h2>Les mariés</h2>
+                    <h1>Les mariés</h1>
                     <p>Nous nous sommes rencontrés il y a... </span></p>
                     <p><i>- Mariana, c'est quoi la date déjà?</i></p>
                     <p><i>- Jules, ca a pas changé, c'est toujours ton anniv plus mon anniv.</i></p>
                     <p>... il y a 5 ans, le 15 septembre 2018 ! Et comment ne pas sucomber au charme de cette belle ukrainienne ! Et de ce français aussi, d'ailleurs. Pendant tout ce temps, notre couple avait construit une relation solide. Nous avions voyagé ensemble, nous avions appris la langue de l'autre, nous nous étions manqués à distance, nous étions tombés amoureux... Et maintenant, il est temps pour nous de passer à une nouvelle étape, celle du mariage.</p>
                 </td>
+                <td style="width:4em;"></td>
                 <td>
-                    <h2>Наречені</h2>
+                    <h1>Наречені</h1>
                     <p>Ми зустрілися...</p>
                     <p><i>- Мар'яна : Яка дата нашої першої зустрічі?</i></p>
                     <p><i>- Жюль : Це не змінилося, це твій день народження плюс мій день народження.</span></i></p>
@@ -56,75 +86,145 @@
             </tr>
         </tbody>
     </table>
+    <br>
+    <br>
     <img src="pic2.jpg" alt="Trulli" width="70%" class="image">
     <br><br><br>
 </div>
 
-<br><br><br>
+<div id="section6" class="box">
+    <table>
+        <tbody>
+            <tr>
+                <td> 
+                    <h1>Les parents de Mariana</h1>
+                </td>
+                <td style="width:4em;"></td>
+                <td>
+                    <h1>Батьки Мар’яни</h1>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <tbody>
+            <tr>
+                <td> 
+                    <p>Les photos seront bientôt publiées...</p>
+                </td>
+                <td style="width:4em;"></td>
+                <td>
+                    <p>Фото будуть опубліковані найближчим часом...</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>   <br><br>
+    <table>
+        <tbody>
+            <tr>
+                <td> 
+                    <h1>Les parents de Jules</h1>
+                </td>
+                <td style="width:4em;"></td>
+                <td>
+                    <h1>Батьки Жуля</h1>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <tbody>
+            <tr>
+                <td> 
+                    <img src="dad1.jpg" alt="Trulli" width="400em" class="image">
+                </td>
+                <td style="width:4em;"></td>
+                <td>
+                    <img src="dad2.jpg" alt="Trulli" width="400em" class="image">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
 <div id="section5" class="box">
     <table>
         <tbody>
             <tr>
                 <td>
-                    <h2>Les témoins de choc</h2>
+                    <h1>Les témoins de choc</h1>
                     <p>L'une colombienne, l'autre français. Derrière son apparence de tranquillité, ce couple explosif transforme le piment en dynamite !</p>
                     
                 </td>
+                <td style="width:4em;"></td>
                 <td>
-                    <h2>Шок свідків</h2>
+                    <h1>Шок свідків</h1>
                     <p>Вона колумбійка, він француз. Попри спокійну зовнішність, ця вибухова парочка перетворює перець чилі на динаміт!</p>
                 </td>
             </tr>
         </tbody>
     </table>
+    <br><br>
 <img src="janse.jpg" alt="Trulli" width="40%" class="image">
-<br><br><br>
 </div>
-<br><br><br>
+<br>
 <div id="section2" class="box">
     <table>
         <tbody>
             <tr>
                 <td>
-                    <h2>Quand</h2>
+                    <h1>Quand</h1>
                     <p>Le samedi 23 septembre 2023.</p>
                     <p>La cérémonie à la mairie se déroulera à 16h.</p>
+                    <p>Vous serez ensuite conviés a un cocktail, un diner puis une soirée qui finira tard dans la nuit.</p>
+                    <p>Le lendemain, pour ceux qui le souhaitent, un petit déjeuner sera organisé dans le centre de Tours, au 48 rue de Boisdenier.</p>
+
                 </td>
+                <td style="width:4em;"></td>
                 <td>
-                    <h2>Коли</h2>
+                    <h1>Коли</h1>
                     <p>Субота, 23 вересня 2023 р.</p>
                     <p>Церемонія в мерії відбудеться о 16:00 за французьким часом.</p>
+                    <p>Потім вас запросять на коктейль, вечерю, а потім вечір, який закінчиться пізно ввечері.</p>
+                     <p>Наступного дня для бажаючих буде організовано сніданок у центрі Тура, за адресою: rue de Boisdenier, 48.</p>
                 </td>
             </tr>
         </tbody>
     </table>
+    <br><br>
     <img src="calendar.png" alt="Trulli" width="60%" class="image">
 
-    <br><br><br>
+
 </div>
-<br><br><br>
+
 <div id="section3" class="box">
     <table>
         <tbody>
             <tr>
                 <td>
-                    <h2>Où</h2>
+                    <h1>Où</h1>
 <p>Le mariage se déroulera à Tours.</p>
 <p>La célébration se fera à la mairie de Tours puis vous serez invités à un cocktail et un dîner au Manoir de la Tour à Saint-Cyr-Sur-Loire.</p>
 <a href="https://www.google.de/maps/dir/Manoir+de+la+Tour,+Rue+Victor+Hugo,+Saint-Cyr-sur-Loire,+Frankreich/H%C3%B4tel+de+Ville+de+Tours,+1-3+Rue+des+Minimes,+37000+Tours,+Frankreich/@47.3924863,0.655637,13.11z/data=!4m14!4m13!1m5!1m1!1s0x47fcd531320a7e93:0x5064dbaa79b4b00f!2m2!1d0.67088!2d47.4026398!1m5!1m1!1s0x47fcd6750d322495:0xfa7cb46dce21cd00!2m2!1d0.6893812!2d47.3905043!3e2"><p>Cliquez ici pour visualiser l'itinéraire.</p></a>
 <p>A 16h, nous serons avec vous à la mairie pour la cérémonie de mariage.</p>
                 </td>
+                <td style="width:4em;"></td>
                 <td>
-                    <h2>Де</h2>
+                    <h1>Де</h1>
 <p>Весілля відбудеться в Турі.</p>
 <p>Святкування відбудеться в мерії Тура, після чого Ви запрошені на коктейль і вечерю в Manoir de la Tour в містечку Сен-Сір-Сюр-Луар.</p>
-<a href="https://www.google.de/maps/dir/Manoir+de+la+Tour,+Rue+Victor+Hugo,+Saint-Cyr-sur-Loire,+Frankreich/H%C3% B4tel+de+Ville+de+Tours,+1-3+Rue+des+Minimes,+37000+Tours,+Frankreich/@47.3924863,0.655637,13.11z/data=!4m14!4m13!1m5!1m1!1s0x47fcd531320a7e93: 0x5064dbaa79b4b00f!2m2!1d0.67088!2d47.4026398!1m5!1m1!1s0x47fcd6750d322495:0xfa7cb46dce21cd00!2m2!1d0.6893812!2d47.3905043!3 e2"><p>Натисніть тут, щоб переглянути маршрут.</p></a>
+<a href="https://www.google.de/maps/dir/Manoir+de+la+Tour,+Rue+Victor+Hugo,+Saint-Cyr-sur-Loire,+Frankreich/H%C3% B4tel+de+Ville+de+Tours,+1-3+Rue+des+Minimes,+37000+Tours,+Frankreich/@47.3924863,0.655637,13.11z/data=!4m14!4m13!1m5!1m1!1s0x47fcd531320a7e93: 0x5064dbaa79b4b00f!2m2!1d0.67088!2d47.4026398!1m5!1m1!1s0x47fcd6750d322495:0xfa7cb46dce21cd00!2m2!1d0.6893812!2d47.3905043!3e2"><p>Натисніть тут, щоб переглянути маршрут.</p></a>
 <p>О 16 годині ми будемо з вами в мерії на церемонії одруження.</p>
                 </td>
             </tr>
         </tbody>
     </table>
+    <br><br>
     <img src="mairie.jpeg" width="500em" class="image">
+    <br><br>
     <table>
         <tbody>
             <tr>
@@ -132,6 +232,7 @@
                     
 <p>Puis nous vous invitons au Manoir de la Tours, à Saint-Cyr-Sur-Loire, pour un cocktail, un dîner, et une soirée!</p>
                 </td>
+                <td style="width:3em;"></td>
                 <td>
 
 <p>Тоді ми запрошуємо вас до Manoir de la Tours у містечко Сен-Сір-сюр-Луар на коктейль, вечерю та вечірку!</p>
@@ -139,16 +240,18 @@
             </tr>
         </tbody>
     </table>
+    <br><br>
     <img src="manoir.webp" width="500em" class="image">
-<br><br><br>
+
 </div>
-<br><br><br>
+
 <div id="section4" class="box">
     <table>
         <tbody>
             <tr>
                 <td>
-                    <h2>Details pratiques</h2>
+                    <h1>Details pratiques</h1>
+                    <br>
     <p><b>Où réserver mon hôtel ?</b></p>
     <p>Nous vous conseillons de réserver votre hôtel dans Tours centre.</p>
     <p><b>J'ai besoin d'une voiture ?</b></p>
@@ -156,8 +259,10 @@
     <p><b>Il y a un thème?</b></p>
     <p>Oui, voici la gamme de couleurs qui sera appréciée:</p>   
                 </td>
+                <td style="width:4em;"></td>
                 <td>
-                    <h2>Практичні деталі</h2>
+                    <h1>Практичні деталі</h1>
+                    <br>
     <p><b>Де я можу забронювати готель?</b></p>
     <p>Радимо бронювати готель у центрі міста Тур. Якщо виникли найменші питання, звертайтеся до нареченої.</p>
     <p><b>Мені потрібна машина?</b></p>
@@ -172,7 +277,7 @@
     <div class="color_grid">
         <div></div>
         <div></div>
-        <div class="sm_box" style="background-color: #F6CEC0"></div>
+        <div class="sm_box" style="background-color: #F6CEC0;"></div>
         <div class="sm_box" style="background-color: #FFE5F2;"></div>
         <div class="sm_box" style="background-color: #113B19;"></div>
         <div class="sm_box" style="background-color: #95B49B;"></div>
