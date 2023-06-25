@@ -67,3 +67,11 @@ table{
     margin-right: 30%;   
     padding: 1em 1em; 
 }
+
+
+.grid_photo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 2em;
+}
