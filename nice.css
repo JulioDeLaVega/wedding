@@ -8,7 +8,7 @@ body{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     /* margin-left: 2%;
     margin-right: 2%; */
-    padding: 8em 8em;
+    padding: 5em 8em;
     color: #113B19;
 }
 
@@ -16,6 +16,8 @@ body{
     background-color: transparent;
     text-align: center;
     border-radius: 0.3em;
+    margin-left: 10%;
+    margin-right: 10%;
     /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
 }
 
@@ -76,4 +78,12 @@ table{
 
 td{
     padding: 1em 1em;
+}
+
+hr{
+    width: 65%;
+    height: 2px;
+    border: none;
+    background: #d1b1c1;
+    /* border-radius: 50%; */
 }
