@@ -8,7 +8,7 @@ body{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     /* margin-left: 2%;
     margin-right: 2%; */
-    padding: 5em 8em;
+    /* padding: 5em 8em; */
     color: #113B19;
 }
 
@@ -31,14 +31,17 @@ table{
 }
 
 .color_grid{
+    
+    /* margin-left: 10%;
+    margin-right: 10%; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    padding: 1em;
+    gap: 1em;
 }
 
 .color_grid > div{
-    height: 5em;
-    width: 5em;
+    width: 25px;
+    height: 25px;
     border-radius: 1em;
 }
 
@@ -51,7 +54,8 @@ table{
 
 .menu{
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    padding: 0em 0em;    
+    padding: 2em 2em; 
+    margin-left: 30%;margin-right: 30%;   
 }
 
 .jour{
@@ -81,9 +85,28 @@ td{
 }
 
 hr{
+    margin-top: 3em;
+    margin-bottom: 3em;
     width: 65%;
     height: 2px;
     border: none;
     background: #d1b1c1;
     /* border-radius: 50%; */
 }
+
+@media screen and (max-width: 800px) {
+    .menu{
+       
+        margin-left: 5%;margin-right: 5%;   
+    }
+    .box{
+        
+        margin-left: 5%;
+        margin-right: 5%;
+        /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+    }
+    img{
+        width: 120%;
+        /* box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
+    }
+  }
