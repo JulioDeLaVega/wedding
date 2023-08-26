@@ -31,17 +31,14 @@ table{
 }
 
 .color_grid{
-    
-    /* margin-left: 10%;
-    margin-right: 10%; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 1em;
 }
 
 .color_grid > div{
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     border-radius: 1em;
 }
 
