@@ -4,42 +4,15 @@
         <link rel="stylesheet" href="nice.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
       </head>
-      <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date("Sept 23, 2023 16:00:00").getTime();
-        
-        // Update the count down every 1 second
-        var x = setInterval(function() {
-        
-          // Get today's date and time
-          var now = new Date().getTime();
-            
-          // Find the distance between now and the count down date
-          var distance = countDownDate - now;
-            
-          // Time calculations for days, hours, minutes and seconds
-          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-          // Output the result in an element with id="demo"
-          document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-          + minutes + "m " + seconds + "s ";
-            
-          // If the count down is over, write some text 
-          if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("demo").innerHTML = "C'est aujourd'hui!";
-          }
-        }, 1000);
-        </script>
 
 <body>
 
 <!-- <img src="pic1.jpg" width="100%" class="blur" style="left: 0em; top: 0em; position: fixed;z-index: -1;"></img> -->
-
-<!-- <div style="height: 30em;"></div> -->
+<br><br><br>
+<div class="photos_mariage">
+<h1><a href="https://drive.google.com/drive/folders/1H0lXv58m5PstWsGnf4TmWCjCVX1ueYU7?usp=sharing">Les photos du mariage sont disponibles !</a></h1>
+</div>
+<br><br><br>
 
 
 <div class="main-content">
@@ -55,7 +28,7 @@
 <br><br>
 <div class="box">
     
-<h1 id="demo"></h1>
+<h1>23 septembre 2023</h1>
 </div>
 <br><br>
 

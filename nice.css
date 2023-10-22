@@ -111,3 +111,12 @@ hr{
 .nico{
    border-radius: 50%;
 }
+
+.photos_mariage{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 0.2em;
+    padding: 2em 2em;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+ }
